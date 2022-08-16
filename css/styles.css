@@ -1,76 +1,88 @@
-:root {
-  --primary-font: 'Open Sans', sans-serif;
-  --secondary-font: 'Raleway', sans-serif;
-  --primary-text-color-theme-dark: #9da4bd;
-  --secondary-text-color-theme-dark: #ffffff;
-  --primary-text-color-theme-light: #303030;
-  --secondary-text-color-theme-light: #555555;
-  --accent-color: #ff6c00;
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.link {
-  text-decoration: none;
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 
-.list {
-  list-style: none;
+button {
+  cursor: pointer;
 }
 
 img {
   display: block;
 }
 
-button {
-  font-family: inherit;
-  cursor: pointer;
+.list {
+  list-style: none;
 }
 
-body {
-  font-family: var(--primary-font);
+.link {
+  text-decoration: none;
 }
 
-/* =========== HEADER =========== */
-.menu-link {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.1em;
-
-  /* color: #ffffff; */
+.title {
+  border: 1px solid tomato;
+  margin-bottom: 20px;
 }
 
-.menu-link:hover,
-.menu-link:focus {
-  color: var(--accent-color);
+/* an + b */
+
+/* 
+2n + 1 - odd
+
+2 * 0 + 1 = 1;
+2 * 1 + 1 = 3;
+
+2n - even
+
+2 * 1 = 2;
+2 * 2 = 4;
+*/
+
+/* 
+-n + 2
+-0 + 2 = 2;
+-1 + 2 = 1;
+-2 + 2 = 0;
+
+*/
+/* 
+.menu-item:not(:last-child) {
+  background-color: teal;
+  margin-bottom: 20px;
+} */
+
+.menu-item:nth-child(2) .menu-link {
+  color: teal;
 }
 
-.contact-phone-number {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.1em;
-
-  /* color: #ffffff; */
+/* 
+3n
+3 * 0 = 0
+3 * 1 = 3
+3 * 2 = 6
+*/
+.portfolio-card:not(:nth-child(3n)) {
+  margin-right: 30px;
 }
 
-.contact-phone-number:hover,
-.contact-phone-number:focus {
-  color: var(--accent-color);
+/* 
+-n + 3
+-0 + 3 = 3;
+-1 + 3 = 2;
+-2 + 3 = 1;
+-3 + 3 = 0;
+*/
+.portfolio-card:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
 }
-
-.modal-open-btn {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-
-  /* color: #ffffff; */
-}
-
-.modal-open-btn:hover,
-.modal-open-btn:focus {
-  background-color: var(--accent-color);
-  color: #ffffff;
-}
-/* =========== /HEADER =========== */
