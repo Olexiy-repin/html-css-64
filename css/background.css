@@ -1,0 +1,9 @@
+.background {
+  width: 900px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 10px dashed rgba(255, 0, 0, 0.5);
+  color: #ffffff;
+  /* background-image: url('https://picsum.photos/seed/picsum/200/300'); */
+}
