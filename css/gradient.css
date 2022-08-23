@@ -16,10 +16,10 @@
 }
 
 .linear-gradient-block {
-  background-image: linear-gradient(blue, yellow);
+  background-image: linear-gradient(180deg, blue 0% 50%, yellow 50% 100%);
   margin-bottom: 20px;
 }
 
 .radial-gradient-block {
-  background-image: radial-gradient(blue, yellow);
+  background-image: radial-gradient(circle at center, blue 0 10px, yellow 0 50px, orange 50px 100%);
 }

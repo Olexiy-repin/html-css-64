@@ -17,6 +17,7 @@
   border: 1px solid #000;
   margin: 0 auto;
   margin-bottom: 40px;
+  box-shadow: inset 0 0 0 0 teal;
 }
 
 .text {
@@ -24,6 +25,7 @@
   font-size: 22px;
   text-align: center;
   color: #000000;
+  text-shadow: 1px 1px 2px tomato;
 }
 
 /* 
