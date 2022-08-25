@@ -99,6 +99,8 @@ body {
 }
 
 .suptitle {
+  display: flex;
+  align-items: center;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -107,12 +109,28 @@ body {
   margin-bottom: 20px;
 }
 
+.suptitle::before {
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+  content: '';
+}
+
 .suptitle-theme-dark {
   color: var(--primary-text-color-theme-dark);
 }
 
+.suptitle-theme-dark::before {
+  background-color: var(--primary-text-color-theme-dark);
+}
+
 .suptitle-theme-light {
   color: var(--primary-text-color-theme-light);
+}
+
+.suptitle-theme-light::before {
+  background-color: var(--primary-text-color-theme-light);
 }
 
 .section-description {
@@ -218,6 +236,10 @@ body {
   padding-left: 100px;
   padding-top: 272px;
   padding-bottom: 206px;
+  background-color: #303030;
+  background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
+    url('../images/hero/bg.jpg');
+  background-size: cover;
 }
 
 .hero-section-description {
@@ -230,6 +252,8 @@ body {
   font-size: 72px;
   line-height: 1.18;
   letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
 /* ==================== /HERO ==================== */
 
@@ -381,6 +405,10 @@ body {
   margin-bottom: 30px;
 } */
 
+.employees-content-wrapper {
+  padding-top: 30px;
+}
+
 .employees-name {
   font-weight: 400;
   font-size: 18px;
@@ -388,6 +416,7 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color-theme-light);
+  margin-bottom: 8px;
 }
 
 .employees-position {
@@ -397,7 +426,41 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+  margin-bottom: 30px;
 }
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.social-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: #303030;
+}
+
+.social-list-icon {
+  width: 20px;
+  height: 20px;
+  fill: #303030;
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--accent-color);
+}
+
 /* ==================== /EMPLOYEES ==================== */
 
 /* ==================== GALLERY ==================== */
