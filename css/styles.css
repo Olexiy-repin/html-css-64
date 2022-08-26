@@ -1,6 +1,6 @@
 :root {
-  --primary-font: 'Open Sans', sans-serif;
-  --secondary-font: 'Raleway', sans-serif;
+  --primary-font: "Open Sans", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
   --primary-text-color-theme-dark: #9da4bd;
   --secondary-text-color-theme-dark: #ffffff;
   --primary-text-color-theme-light: #555555;
@@ -114,7 +114,7 @@ body {
   width: 60px;
   height: 1px;
   margin-right: 20px;
-  content: '';
+  content: "";
 }
 
 .suptitle-theme-dark {
@@ -165,6 +165,7 @@ body {
   color: var(--secondary-text-color-theme-light);
   margin-bottom: 20px;
 }
+
 /* ==================== /COMPONENTS ==================== */
 
 /* =========== HEADER =========== */
@@ -220,6 +221,7 @@ body {
 .contact-phone-number:focus {
   color: var(--accent-color);
 }
+
 /* =========== /HEADER =========== */
 
 /* ==================== HERO ==================== */
@@ -238,7 +240,7 @@ body {
   padding-bottom: 206px;
   background-color: #303030;
   background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-    url('../images/hero/bg.jpg');
+    url("../images/hero/bg.jpg");
   background-size: cover;
 }
 
@@ -255,6 +257,7 @@ body {
   margin-bottom: 20px;
   color: #ffffff;
 }
+
 /* ==================== /HERO ==================== */
 
 /* ==================== ABOUT ==================== */
@@ -289,6 +292,7 @@ body {
   color: var(--primary-text-color-theme-light);
   margin-bottom: 40px;
 }
+
 /* ==================== /ABOUT ==================== */
 
 /* ==================== SERVICES ==================== */
@@ -322,6 +326,7 @@ body {
   display: block;
   margin: 0 auto;
 }
+
 /* ==================== /SERVICES ==================== */
 
 /* ==================== ADVANTAGES ==================== */
@@ -376,6 +381,7 @@ body {
 .advantages-section-description {
   max-width: 460px;
 }
+
 /* ==================== /ADVANTAGES ==================== */
 
 /* ==================== EMPLOYEES ==================== */
@@ -477,6 +483,7 @@ body {
 .portfolio-list-item {
   flex-basis: calc((100% - 120px) / 4);
 }
+
 /* ==================== /GALLERY ==================== */
 
 /* ==================== CONTACT INFO ==================== */
@@ -500,6 +507,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--primary-text-color-theme-dark);
 }
+
 /* ==================== /CONTACT INFO ==================== */
 
 /* ==================== FOOTER ==================== */
@@ -522,4 +530,5 @@ body {
   letter-spacing: 0.2em;
   color: var(--primary-text-color-theme-dark);
 }
+
 /* ==================== /FOOTER ==================== */
