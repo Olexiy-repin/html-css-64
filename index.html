@@ -44,7 +44,9 @@
           </ul>
         </nav>
         <a class="contact-phone-number link" href="tel:+380441111111">+38 044 111 11 11</a>
-        <button class="modal-btn" type="button">онлайн-запись</button>
+        <button class="modal-btn modal-btn-theme-dark" type="button" data-modal-open>
+          онлайн-запись
+        </button>
       </div>
     </header>
     <main>
@@ -109,7 +111,7 @@
               команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда готовы
               усовершенствовать каждого, кто к нам приходит!
             </p>
-            <button class="modal-btn" type="button">онлайн-запись</button>
+            <button class="modal-btn modal-btn-theme-light" type="button">онлайн-запись</button>
           </div>
         </div>
       </section>
@@ -117,7 +119,7 @@
       <section class="services section" id="services">
         <div class="container">
           <p class="suptitle suptitle-theme-dark">Проведи время в компании лучших мастеров</p>
-          <h2 class="title">Услуги и цены</h2>
+          <h2 class="title title-theme-dark">Услуги и цены</h2>
           <div class="services-table-wrapper">
             <table class="services-table list">
               <tr class="services-table-row">
@@ -156,7 +158,9 @@
               </tr>
             </table>
           </div>
-          <button class="modal-btn services-modal-btn" type="button">онлайн-запись</button>
+          <button class="modal-btn modal-btn-theme-dark services-modal-btn" type="button">
+            онлайн-запись
+          </button>
         </div>
       </section>
       <!-- ADVANTAGES -->
@@ -426,5 +430,16 @@
         </ul>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close>
+          <svg class="modal-close-icon" width="18" height="18">
+            <use href="./images//sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>

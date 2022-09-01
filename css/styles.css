@@ -1,11 +1,12 @@
 :root {
-  --primary-font: 'Open Sans', sans-serif;
-  --secondary-font: 'Raleway', sans-serif;
+  --primary-font: "Open Sans", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
   --primary-text-color-theme-dark: #9da4bd;
   --secondary-text-color-theme-dark: #ffffff;
   --primary-text-color-theme-light: #555555;
   --secondary-text-color-theme-light: #303030;
   --accent-color: #ff6c00;
+  --transition-dur-and-func: 250ms linear;
 }
 
 h1,
@@ -71,6 +72,7 @@ body {
   letter-spacing: 0.09em;
   text-transform: uppercase;
   cursor: pointer;
+  transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
 }
 
 .modal-btn:hover,
@@ -79,9 +81,25 @@ body {
   color: #ffffff;
 }
 
+.modal-btn-theme-dark {
+  color: var(--secondary-text-color-theme-dark);
+}
+
+.modal-btn-theme-light {
+  color: var(--secondary-text-color-theme-light);
+}
+
 .media-list {
   display: flex;
+  align-items: center;
   column-gap: 40px;
+}
+
+.media-list::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  background-color: var(--secondary-text-color-theme-light);
 }
 
 .media-list-link {
@@ -114,7 +132,7 @@ body {
   width: 60px;
   height: 1px;
   margin-right: 20px;
-  content: '';
+  content: "";
 }
 
 .suptitle-theme-dark {
@@ -165,10 +183,13 @@ body {
   color: var(--secondary-text-color-theme-light);
   margin-bottom: 20px;
 }
+
 /* ==================== /COMPONENTS ==================== */
 
 /* =========== HEADER =========== */
 .page-header {
+  position: absolute;
+  width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -197,8 +218,8 @@ body {
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
-
-  /* color: #ffffff; */
+  color: var(--secondary-text-color-theme-dark);
+  transition: color var(--transition-dur-and-func);
 }
 
 .menu-link:hover,
@@ -213,13 +234,15 @@ body {
   letter-spacing: 0.1em;
   margin-left: auto;
   margin-right: 40px;
-  /* color: #ffffff; */
+  color: var(--secondary-text-color-theme-dark);
+  transition: color var(--transition-dur-and-func);
 }
 
 .contact-phone-number:hover,
 .contact-phone-number:focus {
   color: var(--accent-color);
 }
+
 /* =========== /HEADER =========== */
 
 /* ==================== HERO ==================== */
@@ -238,7 +261,7 @@ body {
   padding-bottom: 206px;
   background-color: #303030;
   background-image: linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2)),
-    url('../images/hero/bg.jpg');
+    url("../images/hero/bg.jpg");
   background-size: cover;
 }
 
@@ -255,6 +278,7 @@ body {
   margin-bottom: 20px;
   color: #ffffff;
 }
+
 /* ==================== /HERO ==================== */
 
 /* ==================== ABOUT ==================== */
@@ -289,9 +313,16 @@ body {
   color: var(--primary-text-color-theme-light);
   margin-bottom: 40px;
 }
+
 /* ==================== /ABOUT ==================== */
 
 /* ==================== SERVICES ==================== */
+.services {
+  background-image: url("../images/services/bg.png");
+  background-size: cover;
+  background-color: #111319;
+}
+
 .services-table-wrapper {
   display: flex;
 }
@@ -300,13 +331,34 @@ body {
   flex-basis: 50%;
   padding: 30px 40px;
   margin-bottom: 50px;
-  border: 1px solid #cccccc;
+}
+
+.services-table:first-child {
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.services-table:last-child {
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
 
 .services-table-row {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   row-gap: 20px;
+}
+
+.services-table-row:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.services-table-row::before {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  margin-left: 6px;
+  margin-right: 6px;
+  background-color: rgba(157, 164, 189, 0.12);
 }
 
 .services-table-name,
@@ -318,10 +370,15 @@ body {
   color: var(--primary-text-color-theme-dark);
 }
 
+.services-table-name {
+  order: -1;
+}
+
 .services-modal-btn {
   display: block;
   margin: 0 auto;
 }
+
 /* ==================== /SERVICES ==================== */
 
 /* ==================== ADVANTAGES ==================== */
@@ -376,6 +433,7 @@ body {
 .advantages-section-description {
   max-width: 460px;
 }
+
 /* ==================== /ADVANTAGES ==================== */
 
 /* ==================== EMPLOYEES ==================== */
@@ -443,6 +501,7 @@ body {
   height: 44px;
   border-radius: 50%;
   background-color: #ffffff;
+  transition: background-color var(--transition-dur-and-func);
 }
 
 .social-list-link:hover,
@@ -454,6 +513,7 @@ body {
   width: 20px;
   height: 20px;
   fill: #303030;
+  transition: fill var(--transition-dur-and-func);
 }
 
 .social-list-link:hover .social-list-icon,
@@ -477,6 +537,7 @@ body {
 .portfolio-list-item {
   flex-basis: calc((100% - 120px) / 4);
 }
+
 /* ==================== /GALLERY ==================== */
 
 /* ==================== CONTACT INFO ==================== */
@@ -500,6 +561,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--primary-text-color-theme-dark);
 }
+
 /* ==================== /CONTACT INFO ==================== */
 
 /* ==================== FOOTER ==================== */
@@ -522,4 +584,51 @@ body {
   letter-spacing: 0.2em;
   color: var(--primary-text-color-theme-dark);
 }
+
 /* ==================== /FOOTER ==================== */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 500ms ease, visibility 500ms ease;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 580px;
+  background-color: rgb(255, 255, 255);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #303030;
+  padding: 0;
+}
