@@ -437,6 +437,54 @@
             <use href="./images//sprite.svg#icon-close"></use>
           </svg>
         </button>
+        <p class="modal-form-title">Записатися до барбершопу</p>
+        <form class="modal-form">
+          <label class="modal-form-field">
+            <span class="modal-form-field-desc">Імʼя*</span>
+            <span class="modal-form-input-wrapper">
+              <input
+                type="text"
+                class="modal-form-input"
+                required
+                pattern="[a-zA-Zа-яА-ЯіІїЇ`ʼ]+"
+                name="user_name"
+                placeholder="Олексій"
+              />
+              <span class="modal-form-input-icon"></span>
+            </span>
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-field-desc">Телефон*</span>
+            <span class="modal-form-input-wrapper">
+              <input
+                type="tel"
+                class="modal-form-input"
+                required
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                title="xxx-xxx-xx-xx"
+                name="user_phone"
+                placeholder="096-345-34-34"
+              />
+              <span class="modal-form-input-icon"></span>
+            </span>
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-field-desc">Коментар</span>
+            <textarea
+              name="user_message"
+              class="modal-form-message"
+              placeholder="Повідомлення"
+            ></textarea>
+          </label>
+          <label class="modal-form-check-field">
+            <input type="checkbox" class="modal-form-check" name="user_policy" required />
+            <svg class="modal-form-own-checkbox">
+              <use class="modal-form-own-checkbox-icon" href="./images/sprite.svg#icon-check"></use>
+            </svg>
+            Погоджуюсь з&nbsp;<a href="">умовами</a>
+          </label>
+          <button type="submit" class="modal-form-sumbit">Надіслати</button>
+        </form>
       </div>
     </div>
 
