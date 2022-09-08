@@ -252,6 +252,15 @@ body {
 
 .hero-left-side {
   width: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 26px;
+  padding-bottom: 40px;
+}
+
+.hero-media-list {
+  transform: rotate(-90deg) translateX(-18.45px);
+  transform-origin: left top;
 }
 
 .hero-right-side {
