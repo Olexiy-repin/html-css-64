@@ -1,0 +1,13 @@
+.portfolio-suptitle {
+  margin-bottom: 44px;
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portfolio-list-item {
+  flex-basis: calc((100% - 120px) / 4);
+}
