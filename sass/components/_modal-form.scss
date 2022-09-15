@@ -34,11 +34,11 @@
   border: 1px solid #303030;
   padding-left: 42px;
   transition: border-color var(--transition-dur-and-func);
-}
 
-.modal-form-input:focus {
-  outline: none;
-  border-color: var(--accent-color);
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
 }
 
 .modal-form-input-icon {
@@ -51,10 +51,10 @@
   height: 18px;
   background-color: teal;
   transition: background-color var(--transition-dur-and-func);
-}
 
-.modal-form-input:focus + .modal-form-input-icon {
-  background-color: var(--accent-color);
+  .modal-form-input:focus + & {
+    background-color: var(--accent-color);
+  }
 }
 
 .modal-form-message {
@@ -65,16 +65,16 @@
   padding: 15px;
   resize: none;
   transition: border-color var(--transition-dur-and-func);
-}
 
-.modal-form-message::placeholder {
-  font-size: 14px;
-  text-transform: uppercase;
-}
+  &::placeholder {
+    font-size: 14px;
+    text-transform: uppercase;
+  }
 
-.modal-form-message:focus {
-  outline: none;
-  border-color: var(--accent-color);
+  &:focus {
+    outline: none;
+    border-color: var(--accent-color);
+  }
 }
 
 .modal-form-check-field {
@@ -95,23 +95,23 @@
   border-radius: 3px;
   cursor: pointer;
   margin-right: 10px;
+
+  .modal-form-check:checked + & {
+    background-color: var(--accent-color);
+  }
+
+  .modal-form-check:focus + & {
+    box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.5);
+  }
 }
 
 .modal-form-own-checkbox-icon {
   display: none;
   fill: #ffffff;
-}
 
-.modal-form-check:checked + .modal-form-own-checkbox {
-  background-color: var(--accent-color);
-}
-
-.modal-form-check:checked + .modal-form-own-checkbox .modal-form-own-checkbox-icon {
-  display: block;
-}
-
-.modal-form-check:focus + .modal-form-own-checkbox {
-  box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.5);
+  .modal-form-check:checked + .modal-form-own-checkbox & {
+    display: block;
+  }
 }
 
 .modal-form-sumbit {
@@ -130,10 +130,10 @@
   cursor: pointer;
   color: var(--secondary-text-color-theme-light);
   transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
-}
 
-.modal-form-sumbit:hover,
-.modal-form-sumbit:focus {
-  background-color: var(--accent-color);
-  color: #ffffff;
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: #ffffff;
+  }
 }

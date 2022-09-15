@@ -9,6 +9,12 @@
   --transition-dur-and-func: 250ms linear;
 }
 
+.social-list-link, .modal-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -89,11 +95,11 @@ body {
   color: #ffffff;
 }
 
-.modal-btn-theme-dark {
+.modal-btn_theme_dark {
   color: var(--secondary-text-color-theme-dark);
 }
 
-.modal-btn-theme-light {
+.modal-btn_theme_light {
   color: var(--secondary-text-color-theme-light);
 }
 
@@ -110,9 +116,9 @@ body {
 }
 
 .media-list-link {
-  font-weight: 600;
   font-size: 11px;
-  line-height: 1.36;
+  font-weight: 600;
+  line-height: 1.3636363636;
   letter-spacing: 0.2em;
   color: var(--secondary-text-color-theme-light);
   transition: color var(--transition-dur-and-func);
@@ -131,7 +137,6 @@ body {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-
 .suptitle::before {
   display: inline-block;
   width: 60px;
@@ -143,7 +148,6 @@ body {
 .suptitle-theme-dark {
   color: var(--primary-text-color-theme-dark);
 }
-
 .suptitle-theme-dark::before {
   background-color: var(--primary-text-color-theme-dark);
 }
@@ -151,15 +155,14 @@ body {
 .suptitle-theme-light {
   color: var(--primary-text-color-theme-light);
 }
-
 .suptitle-theme-light::before {
   background-color: var(--primary-text-color-theme-light);
 }
 
 .section-description {
-  font-weight: 400;
   font-size: 18px;
-  line-height: 1.67;
+  font-weight: 400;
+  line-height: 1.6666666667;
   letter-spacing: 0.02em;
 }
 
@@ -224,9 +227,6 @@ body {
   position: absolute;
   top: 8px;
   right: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -272,7 +272,6 @@ body {
   padding-left: 42px;
   transition: border-color var(--transition-dur-and-func);
 }
-
 .modal-form-input:focus {
   outline: none;
   border-color: var(--accent-color);
@@ -289,7 +288,6 @@ body {
   background-color: teal;
   transition: background-color var(--transition-dur-and-func);
 }
-
 .modal-form-input:focus + .modal-form-input-icon {
   background-color: var(--accent-color);
 }
@@ -303,12 +301,10 @@ body {
   resize: none;
   transition: border-color var(--transition-dur-and-func);
 }
-
 .modal-form-message::placeholder {
   font-size: 14px;
   text-transform: uppercase;
 }
-
 .modal-form-message:focus {
   outline: none;
   border-color: var(--accent-color);
@@ -333,22 +329,19 @@ body {
   cursor: pointer;
   margin-right: 10px;
 }
+.modal-form-check:checked + .modal-form-own-checkbox {
+  background-color: var(--accent-color);
+}
+.modal-form-check:focus + .modal-form-own-checkbox {
+  box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.5);
+}
 
 .modal-form-own-checkbox-icon {
   display: none;
   fill: #ffffff;
 }
-
-.modal-form-check:checked + .modal-form-own-checkbox {
-  background-color: var(--accent-color);
-}
-
 .modal-form-check:checked + .modal-form-own-checkbox .modal-form-own-checkbox-icon {
   display: block;
-}
-
-.modal-form-check:focus + .modal-form-own-checkbox {
-  box-shadow: 0 0 0 2px rgba(0, 0, 255, 0.5);
 }
 
 .modal-form-sumbit {
@@ -368,9 +361,7 @@ body {
   color: var(--secondary-text-color-theme-light);
   transition: color var(--transition-dur-and-func), background-color var(--transition-dur-and-func);
 }
-
-.modal-form-sumbit:hover,
-.modal-form-sumbit:focus {
+.modal-form-sumbit:hover, .modal-form-sumbit:focus {
   background-color: var(--accent-color);
   color: #ffffff;
 }
@@ -392,7 +383,7 @@ body {
   align-items: center;
 }
 
-.logo {
+.page-navigation__logo {
   margin-right: 70px;
 }
 
@@ -401,7 +392,7 @@ body {
   column-gap: 30px;
 }
 
-.menu-link {
+.menu__link {
   font-weight: 600;
   font-size: 12px;
   line-height: 1.33;
@@ -409,9 +400,11 @@ body {
   color: var(--secondary-text-color-theme-dark);
   transition: color var(--transition-dur-and-func);
 }
+.menu__link:hover, .menu__link:focus {
+  color: var(--accent-color);
+}
 
-.menu-link:hover,
-.menu-link:focus {
+.menu__link_current {
   color: var(--accent-color);
 }
 
@@ -425,9 +418,7 @@ body {
   color: var(--secondary-text-color-theme-dark);
   transition: color var(--transition-dur-and-func);
 }
-
-.contact-phone-number:hover,
-.contact-phone-number:focus {
+.contact-phone-number:hover, .contact-phone-number:focus {
   color: var(--accent-color);
 }
 
@@ -519,11 +510,9 @@ body {
   padding: 30px 40px;
   margin-bottom: 50px;
 }
-
 .services-table:first-child {
   background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
 }
-
 .services-table:last-child {
   background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
 }
@@ -534,11 +523,6 @@ body {
   align-items: baseline;
   row-gap: 20px;
 }
-
-.services-table-row:not(:last-child) {
-  margin-bottom: 20px;
-}
-
 .services-table-row::before {
   content: "";
   flex-grow: 1;
@@ -546,6 +530,9 @@ body {
   margin-left: 6px;
   margin-right: 6px;
   background-color: rgba(157, 164, 189, 0.12);
+}
+.services-table-row:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .services-table-name,
@@ -591,7 +578,6 @@ body {
   padding: 21px;
   background-color: #f7f7f7;
 }
-
 .advantages-list-item:nth-child(even) {
   margin-top: 30px;
 }
@@ -674,18 +660,13 @@ body {
 }
 
 .social-list-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: #ffffff;
   transition: background-color var(--transition-dur-and-func);
 }
-
-.social-list-link:hover,
-.social-list-link:focus {
+.social-list-link:hover, .social-list-link:focus {
   background-color: #303030;
 }
 
@@ -695,9 +676,7 @@ body {
   fill: #303030;
   transition: fill var(--transition-dur-and-func);
 }
-
-.social-list-link:hover .social-list-icon,
-.social-list-link:focus .social-list-icon {
+.social-list-link:hover .social-list-icon, .social-list-link:focus .social-list-icon {
   fill: var(--accent-color);
 }
 
@@ -722,9 +701,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--primary-text-color-theme-dark);
 }
-
-.contact-list-link:hover,
-.contact-list-link:focus {
+.contact-list-link:hover, .contact-list-link:focus {
   color: var(--accent-color);
 }
 

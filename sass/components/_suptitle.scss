@@ -7,28 +7,28 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 20px;
-}
 
-.suptitle::before {
-  display: inline-block;
-  width: 60px;
-  height: 1px;
-  margin-right: 20px;
-  content: '';
+  &::before {
+    display: inline-block;
+    width: 60px;
+    height: 1px;
+    margin-right: 20px;
+    content: '';
+  }
 }
 
 .suptitle-theme-dark {
   color: var(--primary-text-color-theme-dark);
-}
 
-.suptitle-theme-dark::before {
-  background-color: var(--primary-text-color-theme-dark);
+  &::before {
+    background-color: var(--primary-text-color-theme-dark);
+  }
 }
 
 .suptitle-theme-light {
   color: var(--primary-text-color-theme-light);
-}
 
-.suptitle-theme-light::before {
-  background-color: var(--primary-text-color-theme-light);
+  &::before {
+    background-color: var(--primary-text-color-theme-light);
+  }
 }
