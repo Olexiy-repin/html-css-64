@@ -21,7 +21,7 @@
   <body>
     <!-- HEADER -->
     <header class="page-header">
-      <div class="container page-header-container">
+      <div class="container page-header__container">
         <nav class="page-navigation">
           <a class="logo page-navigation__logo" href="./index.html">
             <svg aria-label="логотип" class="logo__img" width="69" height="55">
@@ -43,15 +43,47 @@
             </li>
           </ul>
         </nav>
+        <button type="button" class="open-mobile-menu-btn" data-menu-open>
+          <svg class="open-mobile-menu-btn__icon">
+            <use href="./images/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
         <a class="contact-phone-number link" href="tel:+380441111111">+38 044 111 11 11</a>
-        <button class="modal-btn modal-btn_theme_dark" type="button" data-modal-open>
+        <button
+          class="page-header__modal-btn modal-btn modal-btn_theme_dark"
+          type="button"
+          data-modal-open
+        >
           онлайн-запись
         </button>
+      </div>
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+          <button class="mobile-menu__close-btn" data-menu-close>
+            <svg class="mobile-menu__close-icon">
+              <use href="./images/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="list">
+            <li>
+              <a class="link" href="">link-1</a>
+            </li>
+            <li>
+              <a class="link" href="">link-2</a>
+            </li>
+            <li>
+              <a class="link" href="">link-3</a>
+            </li>
+            <li>
+              <a class="link" href="">link-4</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main>
       <!-- HERO -->
-      <section class="hero">
+      <!-- <section class="hero">
         <div class="container hero-container">
           <div class="hero-left-side">
             <ul class="media-list hero-media-list list">
@@ -71,9 +103,9 @@
             </p>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- ABOUT -->
-      <section class="about section" id="about">
+      <!-- <section class="about section" id="about">
         <div class="container about-container">
           <div class="about-left-side">
             <ul class="about-gallery list">
@@ -114,9 +146,9 @@
             <button class="modal-btn modal-btn_theme_light" type="button">онлайн-запись</button>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- SERVICES -->
-      <section class="services section" id="services">
+      <!-- <section class="services section" id="services">
         <div class="container">
           <p class="suptitle suptitle-theme-dark">Проведи время в компании лучших мастеров</p>
           <h2 class="title title-theme-dark">Услуги и цены</h2>
@@ -162,9 +194,9 @@
             онлайн-запись
           </button>
         </div>
-      </section>
+      </section> -->
       <!-- ADVANTAGES -->
-      <section class="advantages section">
+      <!-- <section class="advantages section">
         <div class="container advantages-container">
           <div class="advantages-left-side">
             <ul class="advantages-list list">
@@ -197,9 +229,9 @@
             </p>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- EMPLOYEES -->
-      <section class="employees-section section" id="our-team">
+      <!-- <section class="employees-section section" id="our-team">
         <div class="container">
           <p class="suptitle suptitle-theme-light">для настоящих ценителей атмосферы</p>
           <h2 class="title title-theme-light employees-title">Наши мастера</h2>
@@ -335,9 +367,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- PORTFOLIO -->
-      <section class="portfolio section">
+      <!-- <section class="portfolio section">
         <div class="container">
           <h2 hidden>галерея работ</h2>
           <p class="suptitle suptitle-theme-light portfolio-suptitle">
@@ -382,14 +414,14 @@
             </li>
           </ul>
         </div>
-      </section>
-      <div id="contacts">
-        <!-- CONTACT FORM -->
-        <section class="contact-form-section">
+      </section> -->
+      <!-- <div id="contacts"> -->
+      <!-- CONTACT FORM -->
+      <!-- <section class="contact-form-section">
           <h2 class="title">Онлайн-запись</h2>
-        </section>
-        <!-- CONTACT INFORMATION -->
-        <section class="contact-info-section">
+        </section> -->
+      <!-- CONTACT INFORMATION -->
+      <!-- <section class="contact-info-section">
           <h2 class="title">Контакты</h2>
           <address>
             <ul class="contact-list list">
@@ -413,11 +445,11 @@
           </address>
           <h3 class="suptitle">время работы</h3>
           <p class="contact-info-date">Ежедневно с 9:00 до 22:00</p>
-        </section>
-      </div>
+        </section> -->
+      <!-- </div> -->
     </main>
     <!-- FOOTER -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container footer-container">
         <p class="copyright">&#xa9; Copyright 2020</p>
         <ul class="media-list list">
@@ -429,8 +461,8 @@
           </li>
         </ul>
       </div>
-    </footer>
-    <div class="backdrop is-hidden" data-modal>
+    </footer> -->
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-close-icon" width="18" height="18">
@@ -486,8 +518,9 @@
           <button type="submit" class="modal-form-sumbit">Надіслати</button>
         </form>
       </div>
-    </div>
+    </div> -->
 
-    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
+    <!-- <script src="./js/modal.js"></script> -->
   </body>
 </html>

@@ -68,13 +68,69 @@ body {
 }
 
 .container {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    width: 448px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: bisque;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity var(--transition-dur-and-func), visibility var(--transition-dur-and-func);
+  }
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .mobile-menu__container {
+    position: relative;
+    padding-left: 40px;
+  }
+  .mobile-menu__close-btn {
+    position: absolute;
+    top: 48px;
+    right: 15px;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    line-height: 0;
+  }
+  .mobile-menu__close-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+}
 .modal-btn {
   min-width: 160px;
   min-height: 40px;
@@ -366,62 +422,89 @@ body {
   color: #ffffff;
 }
 
-.page-header {
-  position: absolute;
-  width: 100%;
-  padding-top: 32px;
-  padding-bottom: 32px;
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+  .page-header__modal-btn {
+    display: none;
+  }
+  .open-mobile-menu-btn {
+    line-height: 0;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+  }
+  .open-mobile-menu-btn__icon {
+    width: 40px;
+    height: 40px;
+  }
 }
-
-.page-header-container {
-  display: flex;
-  align-items: center;
-}
-
-.page-navigation {
-  display: flex;
-  align-items: center;
-}
-
-.page-navigation__logo {
-  margin-right: 70px;
-}
-
-.menu {
-  display: flex;
-  column-gap: 30px;
-}
-
-.menu__link {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.1em;
-  color: var(--secondary-text-color-theme-dark);
-  transition: color var(--transition-dur-and-func);
-}
-.menu__link:hover, .menu__link:focus {
-  color: var(--accent-color);
-}
-
-.menu__link_current {
-  color: var(--accent-color);
-}
-
 .contact-phone-number {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.1em;
-  margin-left: auto;
-  margin-right: 40px;
-  color: var(--secondary-text-color-theme-dark);
-  transition: color var(--transition-dur-and-func);
-}
-.contact-phone-number:hover, .contact-phone-number:focus {
-  color: var(--accent-color);
+  display: none;
 }
 
+.page-header {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #303030;
+}
+
+.page-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .open-mobile-menu-btn {
+    display: none;
+  }
+  .page-navigation {
+    display: flex;
+    align-items: center;
+  }
+  .page-navigation__logo {
+    margin-right: 70px;
+  }
+  .menu {
+    display: flex;
+    column-gap: 24px;
+  }
+  .menu__link {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    color: var(--secondary-text-color-theme-dark);
+    transition: color var(--transition-dur-and-func);
+  }
+  .menu__link:hover, .menu__link:focus {
+    color: var(--accent-color);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-header__container {
+    justify-content: flex-start;
+  }
+  .contact-phone-number {
+    display: block;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.1em;
+    margin-left: auto;
+    margin-right: 40px;
+    color: var(--secondary-text-color-theme-dark);
+    transition: color var(--transition-dur-and-func);
+  }
+  .contact-phone-number:hover, .contact-phone-number:focus {
+    color: var(--accent-color);
+  }
+  .menu {
+    column-gap: 40px;
+  }
+}
 .hero-container {
   display: flex;
 }
